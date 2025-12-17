@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Design Co.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="" alt="Company logo.">
+        <nav role="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-left">
+            <section class="hero-section">
+                <img src="https://images.pexels.com/photos/27086978/pexels-photo-27086978.jpeg"
+                    alt="An elderly person using a laptop.">
+                <h1 id="hero-title">More accessibility for all!</h1>
+                <button class="CTA-button">Get Started</button>
+            </section>
+
+            <section class="about-section">
+                <h2 id="about-title">About Us</h2>
+                <p>Welcome to Accessible Design Co. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+                    consequuntur amet veritatis, fugiat eveniet maxime recusandae provident dolor autem officia quis
+                    ipsam
+                    voluptates natus doloribus repellat fugit eum possimus deserunt!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique eaque itaque amet dolorum ad
+                    repellendus, voluptate nesciunt libero eveniet atque quam aliquam. Repellat animi voluptatem dolorum
+                    ad nam quia.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore odio similique aut quasi modi
+                    aliquid
+                    voluptates quas quod repudiandae quos recusandae minus nam fuga molestias, voluptatem praesentium
+                    quis
+                    ratione? Nemo.</p>
+            </section>
+        </div>
+
+        <div class="main-right">
+            <section class="services-section">
+                <h2>Services</h2>
+                <article id="service1">
+                    <img src="https://images.pexels.com/photos/27086978/pexels-photo-27086978.jpeg"
+                        alt="An elderly person using a laptop.">
+                    <h3>Consulting</h3>
+                    <p class="services-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </article>
+                <article id="service2">
+                    <img src="https://images.pexels.com/photos/27086978/pexels-photo-27086978.jpeg"
+                        alt="An elderly person using a laptop.">
+                    <h3>Resources</h3>
+                    <p class="services-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </article>
+
+                <form class="contact-form">
+                    <h2 class="contact-heading">Leave a Message!</h2>
+
+                    <label for="name">Name</label>
+                    <input class="contact-input" id="name" type="text" placeholder="Steven Huang" required
+                        aria-required="true" tabindex="1" />
+
+                    <label for="email">Email</label>
+                    <input class="contact-input" id="email" type="text" placeholder="example@gmail.com" required
+                        aria-required="true" tabindex="2" />
+
+                    <label for="subject">Subject</label>
+                    <input class="contact-input" id="subject" type="text" placeholder="Estimates" required
+                        aria-required="true" tabindex="3" />
+
+                    <label for="message">Message</label>
+                    <textarea class="contact-textarea" id="message" rows="3" cols="22" placeholder="Your message..."
+                        required aria-required="true" tabindex="4"></textarea>
+
+                    <button id="submitButton" class="contact-submit-button" type="button" role="button"
+                        aria-describedby="submitForm" tabindex="5">Submit</button>
+                </form>
+
+                <article>
+                    <h2>Search</h2>
+                    <input name="searchText" type="text" aria-labelledby="searchbtn" tabindex="6">
+                    <input name="searchButton" id="searchButton" role="button" type="submit" value="Search"
+                        onclick="submitButton()" tabindex="7">
+                </article>
+
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy 2025 Accessible Design Co.</p>
+        <p class="socials"><a href="#">Social 1</a> | <a href="#">Social 2</a> | <a href="#">Social 3</a></p>
+        <p class="contact-email">contact@email.com</p>
+    </footer>
+
+    <script>
+        function submitButton() {
+            const button = document.getElementById('searchButton');
+            button.outerHTML = '<p id="submitForm" aria-live="polite">No results!</p>';
+        }
+    </script>
+</body>
+
+</html>
