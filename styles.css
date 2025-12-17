@@ -22,10 +22,6 @@ header img {
     object-fit: cover;
 }
 
-p {
-    margin: 10px;
-}
-
 nav {
     display: flex;
     align-items: center;
@@ -112,6 +108,10 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+footer p {
+    margin: 10px;
 }
 
 .socials a {
